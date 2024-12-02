@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guías Académicas</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #459f95, #6171b2);
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+        header {
+            background-color: #459f95;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+        .container {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #8dbadc;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            animation: slideUp 1s ease-out;
+        }
+        h2 {
+            color: #2C5234;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #6da8d5;
+            border: 1px solid #8dbadc;
+            border-radius: 8px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        ul li:hover {
+            background-color: #dff5e8;
+            transform: translateY(-5px);
+        }
+        ul li a {
+            text-decoration: none;
+            color: #2C5234;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        ul li a:hover {
+            color: #1a3e2b;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px 0;
+            background-color: #68b8e0;
+            color: #fff;
+            font-size: 0.9em;
+        }
+        #back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #33c5e2;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+        #back-to-top:hover {
+            background-color: #1a3e2b;
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.5em;
+            }
+            ul li a {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Botón para volver -->
+<div style="text-align: left; padding: 10px;">
+    <button onclick="location.href='ProyectoInformatico2.html'">Volver a la página principal</button>
+</div>
+<header>
+    <h1>Guías Académicas</h1>
+    <p>Accede a guías completas organizadas por materias</p>
+</header>
+
+<div class="container">
+    <h2>Materias Disponibles</h2>
+    <p>Selecciona una materia para descargar la guía correspondiente:</p>
+    <ul>
+        <li><a href="carreras/ingenieria_en_computacion/guias/algebra_lineal/guias_algebra_lineal.pdf" download aria-label="Descargar guía de Álgebra Lineal">Descargar guía de Álgebra Lineal</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/guias/ecuaciones_diferenciales/guias_ecuaciones_diferenciales.pdf" download aria-label="Descargar guía de Ecuaciones Diferenciales">Descargar guía de Ecuaciones Diferenciales</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/guias/quimica/guias_quimica.pdf" download aria-label="Descargar guía de Química">Descargar guía de Química</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/guias/estadistica/guias_estadistica.pdf" download aria-label="Descargar guía de Estadística">Descargar guía de Estadística</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/guias/bases_de_datos/guias_bases_de_datos.pdf" download aria-label="Descargar guía de Bases de Datos">Descargar guía de Bases de Datos</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/guias/electromagnetismo/guias_electromagnetismo.pdf" download aria-label="Descargar guía de Electromagnetismo">Descargar guía de Electromagnetismo</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/guias/transmision_de_datos/guias_transmision_de_datos.pdf" download aria-label="Descargar guía de Transmisión de Datos">Descargar guía de Transmisión de Datos</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/guias/circuitos_electronicos/guias_circuitos_electronicos.pdf" download aria-label="Descargar guía de Circuitos Electrónicos">Descargar guía de Circuitos Electrónicos</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/guias/calculo/guias_calculo.pdf" download aria-label="Descargar guía de Cálculo">Descargar guía de Cálculo</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/guias/geometria_analitica/guias_geometria_analitica.pdf" download aria-label="Descargar guía de Geometría Analítica">Descargar guía de Geometría Analítica</a></li>
+    </ul>
+</div>
+
+<button id="back-to-top" title="Volver arriba">&#8679;</button>
+
+<footer>
+    <p>&copy; 2024 Guías Académicas. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    const backToTop = document.getElementById("back-to-top");
+
+    window.addEventListener("scroll", () => {
+        backToTop.style.display = window.scrollY > 200 ? "block" : "none";
+    });
+
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes Académicos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8dbadc;
+            color: #333;
+        }
+        header {
+            background-color: #459f95;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgb(126, 184, 234);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            color: #2C5234;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        p {
+            margin: 10px 0 20px;
+            font-size: 1rem;
+            color: #555;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 15px 0;
+        }
+        ul li a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2C5234;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        ul li a:hover {
+            background-color: #4caf50;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+<!-- Botón para volver -->
+<div style="text-align: left; padding: 10px;">
+    <button onclick="location.href='ProyectoInformatico2.html'">Volver a la página principal</button>
+</div>
+<header>
+    <h1>Apuntes Académicos</h1>
+    <p>Accede a apuntes organizados por materias</p>
+</header>
+
+<div class="container">
+    <h2>Materias Disponibles</h2>
+    <p>Selecciona una materia para descargar los apuntes correspondientes:</p>
+    <ul>
+        <li><a href="carreras/ingenieria_en_computacion/apuntes/algebra_lineal/apuntes_algebra_lineal.pdf" download>Descargar apuntes de Álgebra Lineal</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/apuntes/ecuaciones_diferenciales/apuntes_ecuaciones_diferenciales.pdf" download>Descargar apuntes de Ecuaciones Diferenciales</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/apuntes/quimica/apuntes_quimica.pdf" download>Descargar apuntes de Química</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/apuntes/estadistica/apuntes_estadistica.pdf" download>Descargar apuntes de Estadística</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/apuntes/bases_de_datos/apuntes_bases_de_datos.pdf" download>Descargar apuntes de Bases de Datos</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/apuntes/electromagnetismo/apuntes_electromagnetismo.pdf" download>Descargar apuntes de Electromagnetismo</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/apuntes/transmision_de_datos/apuntes_transmision_de_datos.pdf" download>Descargar apuntes de Transmisión de Datos</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/apuntes/circuitos_electronicos/apuntes_circuitos_electronicos.pdf" download>Descargar apuntes de Circuitos Electrónicos</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/apuntes/calculo/apuntes_calculo.pdf" download>Descargar apuntes de Cálculo</a></li>
+        <li><a href="carreras/ingenieria_en_computacion/apuntes/geometria_analitica/apuntes_geometria_analitica.pdf" download>Descargar apuntes de Geometría Analítica</a></li>
+    </ul>
+</div>
+<button id="back-to-top" title="Volver arriba">&#8679;</button>
+</body>
+</html>

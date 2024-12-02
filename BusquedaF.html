@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos Académicos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #9ba7e0, #394964);
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 1.5s ease;
+        }
+        header {
+            background-color: #459f95;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            animation: slideDown 1s ease-out;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1rem;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgb(78, 153, 190);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            transform: scale(0.95);
+            animation: scaleUp 1s ease-out;
+        }
+        h2 {
+            margin-top: 0;
+            color: #b9c0cd;
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            color: #cadbe5;
+            display: block;
+            margin-top: 10px;
+        }
+        select, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        select:focus {
+            border-color: #a0abcf;
+            outline: none;
+        }
+        button {
+            background-color: #6c95e8;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        button:hover:not(:disabled) {
+            background-color: #86a8c3;
+            transform: scale(1.05);
+        }
+        button:active:not(:disabled) {
+            transform: scale(0.98);
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes scaleUp {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Botón para volver -->
+<div style="text-align: left; padding: 10px;">
+    <button onclick="location.href='ProyectoInformatico2.html'">Volver a la página principal</button>
+</div>
+<header>
+    <h1>Recursos Académicos</h1>
+    <p>Selecciona el tipo de recurso y la materia</p>
+</header>
+
+<div class="container">
+    <h2>Selecciona el recurso y la materia:</h2>
+
+    <!-- Tipo de recurso -->
+    <label for="recurso">Selecciona un tipo de recurso:</label>
+    <select id="recurso">
+        <option value="">Seleccionar recurso</option>
+        <option value="apuntes">Apuntes</option>
+        <option value="guias">Guías</option>
+        <option value="examenes">Exámenes</option>
+    </select>
+
+    <!-- Materias -->
+    <label for="materia">Materias disponibles:</label>
+    <select id="materia" disabled>
+        <option value="">Seleccionar materia</option>
+        <option value="algebra_lineal">Álgebra Lineal</option>
+        <option value="ecuaciones_diferenciales">Ecuaciones Diferenciales</option>
+        <option value="quimica">Química</option>
+        <option value="estadistica">Estadística</option>
+        <option value="bases_de_datos">Bases de Datos</option>
+        <option value="electromagnetismo">Electromagnetismo</option>
+        <option value="transmision_de_datos">Transmisión de Datos</option>
+        <option value="circuitos_electronicos">Circuitos Electrónicos</option>
+        <option value="calculo">Cálculo</option>
+        <option value="geometria_analitica">Geometría Analítica</option>
+    </select>
+
+    <button id="descargar" onclick="descargarRecurso()" disabled>Descargar Recurso</button>
+</div>
+
+<script>
+    const recursoSelect = document.getElementById("recurso");
+    const materiaSelect = document.getElementById("materia");
+    const descargarButton = document.getElementById("descargar");
+
+    // Habilita el selector de materias cuando se selecciona un recurso
+    recursoSelect.addEventListener("change", () => {
+        materiaSelect.disabled = recursoSelect.value === "";
+        descargarButton.disabled = true; // Desactiva el botón hasta que se seleccione todo
+    });
+
+    // Habilita el botón de descarga solo si hay una materia seleccionada
+    materiaSelect.addEventListener("change", () => {
+        descargarButton.disabled = materiaSelect.value === "";
+    });
+
+    function descargarRecurso() {
+        const recurso = recursoSelect.value;
+        const materia = materiaSelect.value;
+
+        if (recurso && materia) {
+            // Construye la ruta según el recurso y materia seleccionados
+            const ruta = `carreras/ingenieria_en_computacion/${recurso}/${materia}/${recurso}_${materia}.pdf`;
+            window.location.href = ruta;
+        } else {
+            alert("Por favor, selecciona un tipo de recurso y una materia.");
+        }
+    }
+</script>
+
+</body>
+</html>

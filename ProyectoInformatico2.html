@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>ElCharlieOS</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #aca6d6, #232b3a);
+            color: #333;
+            animation: fadeIn 2s ease-in;
+        }
+        header {
+            background-color: #459f95;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: slideDown 1.5s ease-out;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2rem;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #76afce;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            animation: fadeIn 1.5s ease;
+        }
+        .nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .nav a:hover {
+            background-color: #4caf50;
+            color: white;
+            transform: scale(1.1);
+        }
+        .container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+            animation: fadeIn 2s ease-in;
+        }
+        .section {
+            margin-bottom: 30px;
+            background-color: rgb(205, 210, 233);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: scale(0.95);
+            transition: transform 0.5s ease;
+        }
+        .section:hover {
+            transform: scale(1);
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #2C5234;
+            position: relative;
+        }
+        .section h2::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #4caf50;
+            margin-top: 5px;
+            border-radius: 2px;
+            animation: grow 1s ease-out;
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin: 10px 0;
+            animation: fadeInUp 1s ease;
+        }
+        .section ul li a {
+            color: #2C5234;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        .section ul li a:hover {
+            color: #4caf50;
+            text-shadow: 0 0 10px #4caf50;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+            transition: border-color 0.3s ease;
+        }
+        textarea:focus {
+            border-color: #4caf50;
+        }
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2C5234;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #4caf50;
+            transform: scale(1.1);
+        }
+        .forum-message {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            animation: slideInLeft 0.5s ease;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes grow {
+            from {
+                width: 0;
+            }
+            to {
+                width: 50px;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Copia el contenido HTML existente aquí -->
+<header>
+    <h1>Plataforma de Apuntes Estudiantiles</h1>
+    <p>Comparte y accede a recursos académicos para estudiantes</p>
+</header>
+
+<nav class="nav">
+    <a href="BusquedaF.html">Sistema de Búsqueda</a>
+    <a href="examenes.html">Exámenes</a>
+    <a href="guias.html">Guías</a>
+    <a href="apuntes.html">Apuntes</a>
+    <a href="#foro">Foro de Discusión</a>
+</nav>
+
+<div class="container">
+    <!-- Sistema de búsqueda -->
+    <div id="busqueda" class="section">
+       
+    </div>
+
+    <!-- Examenes -->
+    <div id="selecciones" class="section">
+        <h2>Examenes</h2>
+        <p>Aquí encontrarás una selección de los Examenes más destacados, elegidos por la comunidad de estudiantes.</p>
+        <!-- Ejemplo de apuntes seleccionados -->
+        <ul>
+            <li>Algebra Lineal</li>
+            <li><a href="carreras/ingenieria_en_computacion/examenes/algebra_lineal/examenes_algebra_lineal.pdf" download>Descargar exámenes de Álgebra Lineal</a></li>
+            <li>Bases de Datos</li>
+            <li><a href="carreras/ingenieria_en_computacion/examenes/bases_de_datos/examenes_bases_de_datos.pdf" download>Descargar exámenes de Bases de Datos</a></li>
+            <li>Ecuaciones Diferenciales</li>
+            <li><a href="carreras/ingenieria_en_computacion/examenes/ecuaciones_diferenciales/examenes_ecuaciones_diferenciales.pdf" download>Descargar exámenes de Ecuaciones Diferenciales</a></li>
+            
+        </ul>
+    </div>
+
+    <!-- Guías -->
+    <div id="guias" class="section">
+        <h2>Guías</h2>
+        <p>Accede a guías completas organizadas por materias.</p>
+        <ul>
+            <li>Algebra Lineal</li>
+            <li><a href="carreras/ingenieria_en_computacion/guias/algebra_lineal/guias_algebra_lineal.pdf" download>Descargar guía de Álgebra Lineal</a></li>
+            <li>Bases de Datos</li>
+            <li><a href="carreras/ingenieria_en_computacion/guias/bases_de_datos/guias_bases_de_datos.pdf" download>Descargar guía de Bases de Datos</a></li>
+            <li>Ecuaciones Diferenciales</li>
+            <li><a href="carreras/ingenieria_en_computacion/guias/ecuaciones_diferenciales/guias_ecuaciones_diferenciales.pdf" download>Descargar guía de Ecuaciones Diferenciales</a></li>
+        </ul>
+    </div>
+
+    <!-- Apuntes -->
+<div id="apuntes" class="section">
+    <h2>Apuntes</h2>
+    <p>Accede a apuntes compartidos por otros estudiantes organizados por materias.</p>
+    <ul>
+        <li>Álgebra Lineal</li>
+        <li><a href="carreras/ingenieria_en_computacion/apuntes/algebra_lineal/apuntes_algebra_lineal.pdf" download>Descargar apuntes de Álgebra Lineal</a></li>
+        <li>Bases de Datos</li>
+        <li><a href="carreras/ingenieria_en_computacion/apuntes/bases_de_datos/apuntes_bases_de_datos.pdf" download>Descargar apuntes de Bases de Datos</a></li>
+        <li>Ecuaciones Diferenciales</li>
+        <li><a href="carreras/ingenieria_en_computacion/apuntes/ecuaciones_diferenciales/apuntes_ecuaciones_diferenciales.pdf" download>Descargar apuntes de Ecuaciones Diferenciales</a></li>
+    </ul>
+</div>
+    <!-- Foro de Discusión -->
+    <div id="foro" class="section">
+        <h2>Foro de Discusión</h2>
+        <p>Únete a la conversación, comparte tus ideas o plantea tus preguntas.</p>
+        <textarea rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+        <button onclick="postMessage()">Publicar</button>
+        <div id="forumContainer"></div>
+    </div>
+</div>
+
+<script>
+    function postMessage() {
+        const forumContainer = document.getElementById('forumContainer');
+        const message = document.querySelector('#foro textarea').value;
+
+        if (!message) {
+            alert("Por favor, escribe un mensaje.");
+            return;
+        }
+
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('forum-message');
+        messageElement.textContent = message;
+        forumContainer.appendChild(messageElement);
+
+        document.querySelector('#foro textarea').value = '';
+    }
+</script>
+</body>
+</html>
